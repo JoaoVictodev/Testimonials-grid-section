@@ -30,6 +30,7 @@ h3 {
   line-height: 0.813rem;
   font-weight: 500;
   color: hsl(0, 0%, 100%);
+  z-index: 999 !important;
 }
 
 span {
@@ -38,6 +39,8 @@ span {
   font-weight: 500;
   color: hsl(0, 0%, 100%);
   opacity: 0.5;
+
+  z-index: 999 !important;
 }
 
 h2 {
@@ -47,11 +50,13 @@ h2 {
   color: hsl(0, 0%, 100%);
   padding-top: 8px;
   padding-bottom: 18px;
+  z-index: 999 !important;
 }
 
 p {
   color: hsl(0, 0%, 81%);
   line-height: 18px;
+  z-index: 999 !important;
 }
 
 .card-1 {
@@ -62,8 +67,21 @@ p {
   place-self: start;
   background-color: hsl(263, 55%, 52%);
   border-radius: 8px;
+  z-index: 500;
   box-sizing: border-box;
-  padding: 27px 50px 27px 30px;
+  padding: 27px 55px 27px 30px;
+  position: relative;
+}
+
+.card-1::before {
+  content: "";
+  background-image: url(../images/bg-pattern-quotation.svg);
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0px;
+  right: 80px;
+  z-index: -1;
 }
 
 .card-2 {
@@ -74,6 +92,7 @@ p {
   background-color: hsl(217, 19%, 35%);
   box-sizing: border-box;
   border-radius: 8px;
+  z-index: 500;
   padding: 27px 50px 27px 30px;
 }
 
@@ -86,6 +105,7 @@ p {
   background-color: white;
   box-sizing: border-box;
   border-radius: 8px;
+  z-index: 500;
   padding: 27px 50px 27px 30px;
 }
 
@@ -108,6 +128,7 @@ p {
   height: 16.688rem;
   max-height: 100%;
   border-radius: 8px;
+  z-index: 500;
   background-color: hsl(219, 29%, 14%);
   box-sizing: border-box;
   padding: 27px 50px 27px 30px;
@@ -119,6 +140,7 @@ p {
   width: 15.625rem;
   max-width: 100%;
   border-radius: 8px;
+  z-index: 500;
   background-color: white;
   box-sizing: border-box;
   padding: 30px;
@@ -135,6 +157,7 @@ p {
   color: hsl(217, 19%, 35%);
   font-weight: 400;
   border-radius: 8px;
+  z-index: 500;
 }
 
 .container p {
@@ -166,6 +189,11 @@ p {
 
   .card-5 {
     margin-bottom: 70px !important;
+  }
+
+  .card-1::before {
+    top: 0px;
+    right: 27px;
   }
 
   .card-1,
